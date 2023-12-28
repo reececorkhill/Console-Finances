@@ -86,3 +86,20 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// Application Startup Message
+console.log("Financial Analysis \n------------------")
+// Displaying total number of months
+console.log("Total Months: " + finances.length)
+
+// Initialising totalSum variable to store the total sum
+var totalSum = 0;
+// Iterating through the finances array
+for (let i = 0; i < finances.length; i++) {
+  totalSum += finances[i][1]; // Adding the 2nd array item to the total sum
+}
+
+// Formatting total sum to include a dollar sign
+var formattedTotal = "$" + totalSum.toFixed(2); // Add dollar sign to start of totalSum value and setting to 2 decimal places
+// Displaying formatted totalSum in console
+console.log("Total: " + formattedTotal)
