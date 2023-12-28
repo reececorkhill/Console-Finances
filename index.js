@@ -139,4 +139,55 @@ for (let i = 0; i < count; i++) {
 var average = count > 0 ? totalSum / count : 0;
 // Rounding the average to nearest hundredth.
 var roundedAverage = Math.round(average * 100) / 100;
-console.log(roundedAverage)
+console.log("Average Change: " + roundedAverage)
+
+
+// Calculating the greatest increase and decrease in profit //
+
+// Initialising variables for max increases and the corresponding months.
+// Max Increase Variables.
+var maxIncrease = Number.MIN_SAFE_INTEGER;
+var maxIncreaseMonth = null;
+// Max Decrease Variables.
+var maxDecrease = Number.MAX_SAFE_INTEGER;
+var maxDecreaseMonth = null;
+
+// Greatest Increase Calculation //
+// Iterating through the differences array.
+for (let i = 0; i < differences.length; i++) {
+  // Getting the current month value.
+  let month = differences[i][0];
+  // Getting the difference value of month.
+  let difference = differences[i][1];
+  // Checking if the current difference is greater than the current maximum.
+  if (difference > maxIncrease) {
+    // Updating the maxIncrease variable.
+    maxIncrease = difference;
+    // Updating the maxIncreaseMonth variable.
+    maxIncreaseMonth = month;
+  }
+}
+// console.log("Greatest Increase in Profits/Losses: " + maxIncreaseMonth, maxIncrease)
+// Adding dollar sign to maxIncrease.
+var formattedMaxIncrease = "$" + maxIncrease;
+console.log("Greatest Increase in Profits/Losses: " + maxIncreaseMonth, formattedMaxIncrease)
+
+// Greatest Decrease Calculation //
+// Iterating through the differences array.
+for (let i = 0; i < differences.length; i++) {
+  // Getting the current month value.
+  let month = differences[i][0];
+  // Getting the difference value of month.
+  let difference = differences[i][1];
+  // Checking if the current difference is less than the current maximum.
+  if (difference < maxDecrease) {
+    // Updating the maxDecrease variable.
+    maxDecrease = difference;
+    // Updating the maxDecreaseMonth variable.
+    maxDecreaseMonth = month;
+  }
+}
+// console.log("Greatest Decrease in Profits/Losses: " + maxDecreaseMonth, maxDecrease)
+// Adding dollar sign to maxDecrease.
+var formattedMaxDecrease = "$" + maxDecrease;
+console.log("Greatest Decrease in Profits/Losses: " + maxDecreaseMonth, formattedMaxDecrease)
