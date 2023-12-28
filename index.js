@@ -100,7 +100,7 @@ for (let i = 0; i < finances.length; i++) {
 }
 
 // Formatting total sum to include a dollar sign.
-var formattedTotal = "$" + totalSum.toFixed(2); // Add dollar sign to start of totalSum value and setting to 2 decimal places.
+var formattedTotal = "$" + totalSum; // Add dollar sign to start of totalSum value --> Removed decimal places.
 // Displaying formatted totalSum in console.
 console.log("Total: " + formattedTotal)
 
@@ -170,7 +170,7 @@ for (let i = 0; i < differences.length; i++) {
 // console.log("Greatest Increase in Profits/Losses: " + maxIncreaseMonth, maxIncrease)
 // Adding dollar sign to maxIncrease.
 var formattedMaxIncrease = "$" + maxIncrease;
-console.log("Greatest Increase in Profits/Losses: " + maxIncreaseMonth, formattedMaxIncrease)
+console.log("Greatest Increase in Profits/Losses: " + maxIncreaseMonth, "(" + formattedMaxIncrease + ")")
 
 // Greatest Decrease Calculation //
 // Iterating through the differences array.
@@ -190,4 +190,4 @@ for (let i = 0; i < differences.length; i++) {
 // console.log("Greatest Decrease in Profits/Losses: " + maxDecreaseMonth, maxDecrease)
 // Adding dollar sign to maxDecrease.
 var formattedMaxDecrease = "$" + maxDecrease;
-console.log("Greatest Decrease in Profits/Losses: " + maxDecreaseMonth, formattedMaxDecrease)
+console.log("Greatest Decrease in Profits/Losses: " + maxDecreaseMonth, "(" + formattedMaxDecrease + ")")
