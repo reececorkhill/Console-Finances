@@ -121,4 +121,22 @@ for (let i = 1; i < finances.length; i++) {
   // Pushing the contents of the result array into the empty differences array.
   differences.push(result);
 }
-console.log(differences)
+// console.log(differences)
+
+
+// Calculating Net Total Profit and Loss over whole period //
+
+// Resetting totalSum to 0 and initialising a count variable.
+var totalSum = 0;
+var count = differences.length;
+// Iterating through the differences array.
+for (let i = 0; i < count; i++) {
+  // Adding each value to the total sum.
+  totalSum += differences[i][1];
+  // console.log(totalSum)
+}
+// Calculating the average of the changes.
+var average = count > 0 ? totalSum / count : 0;
+// Rounding the average to nearest hundredth.
+var roundedAverage = Math.round(average * 100) / 100;
+console.log(roundedAverage)
