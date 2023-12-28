@@ -87,19 +87,38 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// Application Startup Message
+// Application Startup Message.
 console.log("Financial Analysis \n------------------")
-// Displaying total number of months
+// Displaying total number of months in finance array.
 console.log("Total Months: " + finances.length)
 
-// Initialising totalSum variable to store the total sum
+// Initialising totalSum variable to store the total sum.
 var totalSum = 0;
-// Iterating through the finances array
+// Iterating through the finances array.
 for (let i = 0; i < finances.length; i++) {
-  totalSum += finances[i][1]; // Adding the 2nd array item to the total sum
+  totalSum += finances[i][1]; // Adding the 2nd array item to the total sum.
 }
 
-// Formatting total sum to include a dollar sign
-var formattedTotal = "$" + totalSum.toFixed(2); // Add dollar sign to start of totalSum value and setting to 2 decimal places
-// Displaying formatted totalSum in console
+// Formatting total sum to include a dollar sign.
+var formattedTotal = "$" + totalSum.toFixed(2); // Add dollar sign to start of totalSum value and setting to 2 decimal places.
+// Displaying formatted totalSum in console.
 console.log("Total: " + formattedTotal)
+
+
+// Calculating difference in monthly totals in the finances array //
+
+// Initialising an empty array to store month-on-month difference values.
+var differences = [];
+// Iterating through the finances array starting from the second item in the array.
+for (let i = 1; i < finances.length; i++) {
+  // Extracting current and previous months values.
+  let currentMonth = finances[i][1];
+  let previousMonth = finances[i - 1][1];
+  // Calculating month-on-month difference.
+  let monthDifference = currentMonth - previousMonth;
+  // Creating a new array to hold the month and difference to previous month.
+  let result = [finances[i][0], monthDifference];
+  // Pushing the contents of the result array into the empty differences array.
+  differences.push(result);
+}
+console.log(differences)
