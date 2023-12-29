@@ -1,9 +1,21 @@
 # Console Finance Calculator
-Repository for a console based finance calculator.
+Repository for a Console Based Finance Calculator written in JavaScript and HTML.
 
 ## Description
 
+Being able to make precise calculations is imperative when working with numbers and more importantly, finances. That's why I've developed this application, which precisely calculates figures from a dataset.
 
+The aim of this project was to take a pre-existing dataset and make the following calculations and display them in the console:
+
+- The total number of months included in the dataset.
+- The net total amount of Profit/Losses over the entire period.
+- The average of the changes in Profit/Losses over the entire period.
+- The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.
+- The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
+
+The motivation behind this project was to test my skills in what would be a real-world task, whilst making sure I understood the code aswell as the calculations the code was executing.
+
+The problem was, all of the data was readily available but would have had to be calculated manually to reach the desired result which would have taken a great amount of time. The solution to this problem was building an application in JavaScript which would iterate through the initial dataset array and then run through different calculations, saving the results for each calculation and displaying these in the console, saving time and potential miscalculation.
 
 ## Table of Contents
 
