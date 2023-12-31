@@ -30,7 +30,7 @@ N/A
 
 ## Usage
 
-A basic JavaScript based finance calculator app - view <a href="https://reececorkhill.github.io/console-finances/"> here</a>.
+A basic JavaScript based finance calculator app - view <a href="https://reececorkhill.github.io/Console-Finances/"> here</a>.
 
 ![Screenshot of finance calculator homepage.](images/Console-Finance.PNG)
 
