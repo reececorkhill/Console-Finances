@@ -36,7 +36,7 @@ A basic JavaScript based finance calculator app - view <a href="https://reececor
 
 ## Credits
 
-Portfolio project was developed by <a href="https://github.com/reececorkhill">reececorkhill</a>.
+Console Finance Calculator was developed by <a href="https://github.com/reececorkhill">reececorkhill</a>.
 
 ## License
 
